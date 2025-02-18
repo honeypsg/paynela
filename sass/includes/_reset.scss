@@ -1,0 +1,84 @@
+html {
+  scroll-behavior: smooth;
+  text-rendering: geometricPrecision;
+}
+
+body {
+  position: relative;
+  &.menuOpen {
+    overflow: hidden;
+  }
+}
+
+a:focus {
+  outline: none;
+}
+
+.aligncenter {
+  display: block;
+  margin: auto;
+}
+
+a {
+  transition: all 0.2s ease-in-out !important;
+}
+a:hover,
+a:focus {
+  text-decoration: none !important;
+}
+body {
+}
+
+
+#wpadminbar {
+  @include respond-below(md) {
+    overflow: hidden;
+  }
+  &.mobile {
+    @include respond-below(wpm) {
+      display: none;
+    }
+  }
+}
+.white-arrow {
+  display: inline-flex;
+  margin-left: 0.5rem;
+  margin-top: 0.25rem;
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+  background-size: cover;
+  background-image: url(inc/images/arrow-right-white.svg);
+}
+.video-button {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  top: 50%;
+  background-size: cover;
+  height: 8rem;
+  width: 8rem;
+  transition: all 0.2s ease-in;
+  background-repeat: no-repeat;
+  background-image: url(inc/images/play.svg);
+  filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.2));
+}
+
+.video-button-inline {
+  background-size: contain;
+  height: 6rem;
+  width: 6rem;
+  transition: all 0.2s ease-in;
+  background-repeat: no-repeat;
+  background-image: url(inc/images/play.svg);
+  filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.2));
+}
+.chevron-right-button {
+  display: inline-flex;
+  margin-left: 0.5rem;
+  height: 1.75rem;
+  width: 1.75rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url('inc/images/chevron-right-button.svg');
+}

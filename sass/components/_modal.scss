@@ -1,0 +1,47 @@
+.modal {
+  color: $color-white;
+  font-family: $font-poppins;
+  &-backdrop.show {
+    opacity: .8 !important;
+  }
+
+  &-content {
+    border-radius: 1.5rem;
+    background-color: $color-dark-blue;
+    padding: 4rem;
+    position: relative;
+    @include respond-below(lg){
+      padding: 3rem;
+    }
+    @include respond-below(md){
+      padding: 1.5rem;
+    }
+  }
+  &-title{
+    font-size: 3rem;
+    line-height: 120%;
+    font-weight: 400;
+    margin-bottom: 2.5rem;
+    @include respond-below(md){
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+  &-close {
+    padding: 0.865625rem;
+    border-radius: 100%;
+    background: $color-blue;
+    position: absolute;
+    right: -1rem;
+    top: -1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    z-index: 1;
+    &:hover{
+      background: $button-hover-gradient;
+      opacity: 1;
+    }
+  }
+}

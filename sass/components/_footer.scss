@@ -1,0 +1,23 @@
+.footer {
+  font-family: $font-poppins;
+  background-color: $color-dark-blue;
+  position: relative;
+  z-index: 10;
+  padding: 4rem 0;
+  @include respond-below(md){
+    padding: 3.5rem 0;
+  }
+  & .productLogo {
+    width: 11rem;
+    height: auto;
+    @include respond-below(lg){
+      margin-bottom: 2rem;
+    }
+  }
+  &--copyright{
+    margin-bottom: 0;
+    color: $color-white;
+    @include font-size(0.875rem);
+    opacity: .8;
+  }
+}

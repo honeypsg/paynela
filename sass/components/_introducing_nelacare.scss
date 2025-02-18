@@ -1,0 +1,307 @@
+.introducing__nelacare {
+    background: $introducing-nelacare-gradient;
+    padding: 8.75rem 0 0rem;
+    position: relative;
+    font-family: $font-poppins;
+    color: $color-white;
+
+    @include respond-below(lg) {
+        padding: 6rem 0 0;
+    }
+
+    @include respond-below(sm) {
+        padding: 2.5rem 0 0;
+        background: $introducing-nelacare-gradient-mobile;
+    }
+
+    &::before {
+        content: '';
+        background: url(./inc/images/ellipse.webp) no-repeat;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 35.375rem;
+        width: 17.6875rem;
+        background-size: contain;
+    }
+
+    &--intro {
+        padding-bottom: 14.75rem;
+
+        @include respond-below(lg) {
+            padding-bottom: 8.25rem;
+        }
+
+        @include respond-below(md) {
+            padding-bottom: 5rem;
+        }
+
+        &--content {
+            max-width: 32rem;
+            width: 100%;
+
+            @include respond-below(lg) {
+                max-width: 100%;
+                margin-bottom: 2rem
+            }
+
+            & h2 {
+                @include StylingH2;
+                margin-bottom: 1rem;
+
+                @include respond-below(lg) {
+                    font-size: 2.375rem;
+
+                    & br {
+                        display: none;
+                    }
+                }
+
+                @include respond-below(md) {
+                    font-size: 2rem;
+                }
+            }
+
+            & p {
+                font-size: 1.1875rem;
+                line-height: 140%;
+                margin-bottom: 0;
+
+                @include respond-below(lg) {
+                    font-size: 1rem;
+                }
+            }
+        }
+
+        &--accordion {
+            color: $color-white;
+            font-family: $font-poppins;
+
+            &--item {
+                background: transparent !important;
+                border: none !important;
+                position: relative;
+                padding: 1.5rem 2.5rem !important;
+
+                &.active-parent {
+                    background: rgba(23, 86, 198, 0.08) !important;
+                }
+
+                &--button {
+                    background: transparent !important;
+                    border-radius: 0 !important;
+                    padding: 0 !important;
+                    box-shadow: none !important;
+                    &::after{
+                        background-image: url('data:image/svg+xml,<svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.0211 9.65574C16.3833 9.65574 16.6769 9.36215 16.6769 9C16.6769 8.63784 16.3833 8.34426 16.0211 8.34426H9.26767V1.59081C9.26767 1.22865 8.97409 0.935068 8.61194 0.935068C8.24978 0.935068 7.9562 1.22865 7.9562 1.59081V8.34426H1.20274C0.84059 8.34426 0.547006 8.63784 0.547006 9C0.547006 9.36215 0.84059 9.65574 1.20274 9.65574H7.9562V16.4092C7.9562 16.7713 8.24978 17.0649 8.61194 17.0649C8.97409 17.0649 9.26767 16.7713 9.26767 16.4092V9.65574H16.0211Z" fill="%231756C6"/></svg>') !important;
+                    }
+                    &:not(.collapsed)::after{
+                        background-image:url('data:image/svg+xml,<svg width="17" height="2" viewBox="0 0 17 2" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.7286 0.999998C16.7286 1.36215 16.435 1.65574 16.0729 1.65574H1.2545C0.892348 1.65574 0.598764 1.36215 0.598764 0.999998C0.598764 0.637845 0.892347 0.344261 1.2545 0.344261H16.0729C16.435 0.344261 16.7286 0.637845 16.7286 0.999998Z" fill="%231756C6"/></svg>') !important;
+                        position: relative;
+                        top: -.5rem;
+                    }
+                    &--title {
+                        color: $color-white;
+
+                        &--eyebrow {
+                            color: $color-eyebrow;
+                            font-size: 1rem;
+                            font-weight: 300;
+                            margin-bottom: .25rem;
+                            line-height: 140%;
+                        }
+
+                        & h5 {
+                            font-size: 1.875rem;
+                            line-height: 120%;
+                            font-weight: 400;
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+
+                &--body {
+                    padding: 0 !important;
+                    color: $color-white;
+                    padding: 1rem 0 !important;
+                    font-size: 0.9375rem;
+                    font-weight: 300;
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 1px;
+                    /* Border thickness */
+                    background: linear-gradient(to right, #1756C6 0%, #0E135A 100%);
+                }
+            }
+        }
+    }
+
+    &--nelagaurd {
+        color: $color-white;
+        font-family: $font-poppins;
+
+        &--intro {
+            max-width: 62.375rem;
+            width: 100%;
+            margin: auto;
+            text-align: center;
+            margin-bottom: 1.5rem;
+
+            &--title {
+                & h2 {
+                    @include StylingH2;
+                    margin-bottom: 1rem;
+
+                    @include respond-below(lg) {
+                        font-size: 2.375rem;
+                    }
+
+                    @include respond-below(md) {
+                        font-size: 2rem;
+                    }
+                }
+
+                & img {
+                    width: 2.5rem;
+                    height: auto;
+                    position: relative;
+                    top: -.5rem;
+
+                    @include respond-below(md) {
+                        display: none;
+                    }
+                }
+            }
+
+            &--description {
+                font-size: 1.1875rem;
+                font-weight: 300;
+                line-height: 140%;
+
+                @include respond-below(lg) {
+                    font-size: 1rem;
+                }
+            }
+        }
+
+        &--products-section {
+            position: relative;
+            font-family: $font-poppins;
+
+            & img {
+                max-width: 100%;
+                height: auto;
+
+                @include respond-below(md) {
+                    max-width: 100%;
+                    margin: auto;
+                    height: auto;
+                }
+            }
+
+            &--products {
+                max-width: 40rem;
+                width: 100%;
+                margin: auto;
+                position: absolute;
+                left: 50%;
+                top: 40%;
+                transform: translate(-50%, -50%);
+
+                @include respond-below(lg) {
+                    max-width: 36rem;
+                }
+
+                @include respond-below(md) {
+                    max-width: 28rem;
+                }
+
+                @include respond-below(sm) {
+                    position: static;
+                    transform: none;
+                    padding: 2.5rem 0 2.625rem;
+                    background: url('./inc/images/lighting-mobile.webp') no-repeat center center;
+                    background-size: cover;
+                }
+
+                &--item {
+                    max-width: 11.6875rem;
+                    width: 100%;
+                    padding: 5.25rem 1rem;
+                    background: url('./inc/images/product-bg.webp') no-repeat center center;
+                    background-size: contain;
+                    text-align: center;
+
+                    @include respond-below(lg) {
+                        max-width: 10rem;
+                    }
+
+                    @include respond-below(md) {
+                        max-width: 8rem;
+                    }
+
+                    @include respond-below(sm) {
+                        background: $color-dark-blue;
+                        padding: 0;
+                        max-width: calc(100% - 3rem);
+                        margin: auto;
+                        margin-bottom: 1.25rem;
+                        position: relative;
+                        border-radius: 1.5rem;
+                        z-index: 1;
+                        position: relative;
+
+                        &::before {
+                            width: calc(100% + 2px);
+                            height: calc(100% + 2px);
+                            content: '';
+                            background: linear-gradient(270deg, #05BECC 0%, #B312DB 35%, #0E135A 100%);
+                            position: absolute;
+                            left: -1px;
+                            top: -1px;
+                            z-index: -1;
+                            border-radius: inherit;
+                        }
+
+                        &::after {
+                            width: calc(100% + 2px);
+                            height: calc(100% + 2px);
+                            content: '';
+                            background: url('./inc/images/product-bg-pink.webp') no-repeat center center;
+                            position: absolute;
+                            left: 0px;
+                            top: -30%;
+                            z-index: -1;
+                            border-radius: inherit;
+                            background-size: cover;
+                        }
+                    }
+
+                    & h6 {
+                        font-size: 1.25rem;
+                        font-weight: 400;
+                        line-height: 120%;
+                        margin-bottom: 0;
+
+                        @include respond-below(md) {
+                            font-size: 1rem;
+                        }
+
+                        @include respond-below(sm) {
+                            font-size: 1.25rem;
+                            background: $color-black;
+                            border-radius: inherit;
+                            padding: 1.75rem 3.375rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

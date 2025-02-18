@@ -1,0 +1,71 @@
+{
+    "key": "group_679cabf5dbad6",
+    "title": "Contact Modal",
+    "fields": [
+        {
+            "key": "field_679cabf6058b8",
+            "label": "Modal Title",
+            "name": "modal_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_679cac0e058b9",
+            "label": "Select Form",
+            "name": "select_form",
+            "aria-label": "",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "wpforms"
+            ],
+            "post_status": "",
+            "taxonomy": "",
+            "return_format": "id",
+            "multiple": 0,
+            "allow_null": 0,
+            "bidirectional": 0,
+            "ui": 1,
+            "bidirectional_target": []
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "contact-modal"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1738320988
+}

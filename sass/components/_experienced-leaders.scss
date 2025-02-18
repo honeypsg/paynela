@@ -1,0 +1,152 @@
+.experienced__leaders{
+    background: $leader-gradient;
+    padding: 4rem 0 6rem;
+    font-family: $font-poppins;
+    @include respond-below(md){
+        padding: 4rem 0 2rem;
+    }
+    &--intro{
+        color: $color-white;
+        & h2{
+            max-width: 50rem;
+            width: 100%;
+            margin: auto;
+            @include StylingH2;
+            margin-bottom: 1rem;
+            @include respond-below(lg){
+                font-size: 2.375rem;
+                max-width: 38rem;
+            }
+            @include respond-below(md){
+                font-size: 2rem;
+                max-width: 38rem;
+            }
+        }
+        & p{
+            max-width: 60rem;
+            width: 100%;
+            margin: auto;
+            font-size: 1.2rem;
+            font-weight: 300;
+            line-height: 140%;
+            @include respond-below(lg){
+                font-size: 1rem;
+            }
+        }
+    }
+    &--members{
+        margin: auto;
+        margin-top: 3.5rem;
+        max-width: 60rem;
+        gap: 2.5rem;
+        width: 100%;
+        @include respond-below(lg){
+            gap: 2rem;
+        }
+        @include respond-below(sm){
+            max-width: 20rem;
+        }
+        &--item{
+            color: $color-white;
+            &--image{
+                filter: grayscale(1);
+                max-width: 12.1875rem;
+                width: 100%;
+                height: auto;
+            }
+            &--name{
+                font-size: 1.1875rem;
+                font-weight: 300;
+                line-height: 120%;
+                margin-top: .75rem;
+                @include respond-below(lg){
+                    font-size: 1rem;
+                }
+            }
+            &--designation{
+                margin-top: 0.375rem;
+                font-size: 0.875rem;
+                font-weight: 400;
+                line-height: 120%;
+            }
+        }
+    }
+    &--cta{
+        max-width: 67.75rem;
+        width: 100%;
+        margin: auto;
+        margin-top: 6.5rem;
+        padding: 6rem 4rem 4rem;
+        background-color: $color-white;
+        border-radius: 1.5rem;
+        font-family: $font-poppins;
+        @include respond-below(lg){
+            padding: 6rem 2rem 4rem;
+        }
+        @include respond-below(md){
+            padding: 3rem 1.25rem 2rem;
+        }
+        & h4{
+            font-size: 1.875rem;
+            font-weight: 400;
+            line-height: 120%;
+            color: $color-blue;
+            margin-bottom: 2.5rem;
+            @include respond-below(md){
+                font-size: 1.5rem;
+                margin-bottom: 1.5rem;
+            }
+        }
+        &--button{
+            display: inline-block;
+            padding: .9rem 1rem;
+            background: linear-gradient(to bottom, #1756C6, #104BB5); /* Adjust gradient colors */
+            color: white;
+            font-size: 1rem;
+            line-height: 120%;
+            font-weight: bold;
+            border: 1px solid #2C70E8;
+            border-radius: .25rem;
+            position: relative;
+            text-decoration: none;
+            font-weight: 400;
+            gap:0.625rem;
+            width: calc(7.5rem);
+            height: 3.125rem;
+            &::after{
+                content: "";
+                position: absolute;
+                bottom: -2px;
+                right: -1px;
+                width: 12px;
+                height: 12px;
+                background: white;
+                clip-path: polygon(100% 0, 0 100%, 100% 100%);
+            }
+            &::before{
+                content: "";
+                position: absolute;
+                background: #2c70e8;
+                right: 4px;
+                width: 1px;
+                height: 15px;
+                bottom: -3px;
+                z-index: 2;
+                transform: rotate(45deg);
+            }
+            &:hover{
+                background: $button-hover-gradient;
+                border: none;       
+                width: 7.5rem;
+                height: 3.125rem;
+                padding: .9rem 1.068rem;
+                &::before{
+                    display: none;
+                }
+                &::after{
+                    right: 0;
+                }
+            }
+        }
+    }
+}

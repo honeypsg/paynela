@@ -1,0 +1,136 @@
+@mixin background-gradient {
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+}
+@mixin roundedOutline-right {
+  border-top-left-radius: 400px;
+  border-bottom-left-radius: 400px;
+}
+@mixin roundedOutline-left {
+  border-top-right-radius: 400px;
+  border-bottom-right-radius: 400px;
+}
+
+@function tracking($target) {
+  @return ($target / 1000) * 1em;
+}
+
+@mixin tracking($target) {
+  letter-spacing: tracking($target);
+}
+
+@function calculateRem($size) {
+  $remSize: calc($size / 16px);
+  @return calc($size / 16px) rem;
+}
+
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+@mixin heroInfoHeadlineWidth {
+  max-width: 450px;
+}
+@mixin heroInfoTextWidth {
+  max-width: 550px;
+}
+@mixin nav-button-primary-text {
+  font-family: $font-family-headline;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+@mixin image-fill-card {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: $card-border-radius;
+}
+@mixin fill-card-relative {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+@mixin fill-card-absolute {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+@mixin fill-background-absolute {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+@mixin form-item {
+  width: 100%;
+  height: 48px;
+  border-radius: 5px;
+  padding: 0px 20px;
+  border: none;
+  margin-bottom: 10px;
+}
+
+@mixin background-center-fill {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@mixin columnOrder--mediaEnd {
+  flex-direction: row-reverse;
+}
+
+@function strip-units($number) {
+  @return $number / ($number * 0 + 1);
+}
+
+@mixin font-size($sizeValue) {
+  font-size: (strip-units($sizeValue) / 16) + rem;
+}
+
+//Breakpoint tools for Bootstrap 5
+@mixin respond-above($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+    @media (min-width: $breakpoint-value) {
+      @content;
+    }
+  } @else {
+    @warn 'Invalid breakpoint: #{$breakpoint}.';
+  }
+}
+@mixin respond-below($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+    @media (max-width: ($breakpoint-value - 0.02px)) {
+      @content;
+    }
+  } @else {
+    @warn 'Invalid breakpoint: #{$breakpoint}.';
+  }
+}
+@mixin respond-between($lower, $upper) {
+  @if map-has-key($breakpoints, $lower) and map-has-key($breakpoints, $upper) {
+    $lower-breakpoint: map-get($breakpoints, $lower);
+    $upper-breakpoint: map-get($breakpoints, $upper);
+    @media (min-width: $lower-breakpoint) and (max-width: ($upper-breakpoint - 0.02px)) {
+      @content;
+    }
+  } @else {
+    @if (map-has-key($breakpoints, $lower) == false) {
+      @warn 'Your lower breakpoint was invalid: #{$lower}.';
+    }
+    @if (map-has-key($breakpoints, $upper) == false) {
+      @warn 'Your upper breakpoint was invalid: #{$upper}.';
+    }
+  }
+}

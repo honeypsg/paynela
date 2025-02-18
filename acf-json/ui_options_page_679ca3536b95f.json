@@ -1,0 +1,22 @@
+{
+    "key": "ui_options_page_679ca3536b95f",
+    "title": "Header",
+    "active": true,
+    "menu_order": 0,
+    "page_title": "Header",
+    "menu_slug": "header-setting",
+    "parent_slug": "acf-options-theme-settings",
+    "advanced_configuration": 0,
+    "icon_url": "",
+    "menu_title": "",
+    "position": "",
+    "redirect": false,
+    "description": "",
+    "update_button": "Update",
+    "updated_message": "Options Updated",
+    "capability": "edit_posts",
+    "data_storage": "options",
+    "post_id": "",
+    "autoload": 0,
+    "modified": 1738321256
+}

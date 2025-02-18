@@ -1,0 +1,313 @@
+// colors
+$color-white: #fff;
+$color-blue: #1756C6;
+$color-dark-blue: #0E135A;
+$color-eyebrow: #A8ADF2;
+$color-black: #000000;
+$color-teal: #05BECC;
+
+$color-offwhite: #edf0f1;
+$color-headline-black: #212529;
+$color-navy: #071d30;
+$color-turquoise: #15889e;
+$color-beige: #e2d9c6;
+$color-corral: #dd8e7b;
+
+$hero-gradient: linear-gradient(180deg, #0A0D16 0%, #081661 100%);
+$leader-gradient :linear-gradient(180deg, #1756C6 0%, #05BECC 100%);
+$button-hover-gradient: linear-gradient(90deg, #1756C6 0%, #05BECC 100%);
+$introducing-nelacare-gradient: linear-gradient(270deg, #081661 0%, #081763 100%);
+$introducing-nelacare-gradient-mobile: linear-gradient(180deg, #0E135A 0%, #000000 100%);
+$marquee-gradient: linear-gradient(90deg, #05BECCB3 0%, #B312DBB3 100%);
+
+$light-beige-gradient: linear-gradient(180deg,
+    rgba(235, 215, 185, 0.2) 0%,
+    rgba(190, 170, 125, 0.17) 100%),
+  #fff;
+
+$brown-button-gradient: linear-gradient(129deg, #ffa492 0%, #b25e50 100%);
+
+$color-crimson: #640f27;
+$color-indian-yellow: #e7a750;
+$color-bright-red: #d85042;
+$color-bullet-orange: #f2a43a;
+$color-medium-gray: #737373;
+$color-contact-red: #b73257;
+$color-dark-caption: #2b2b2b;
+
+@mixin disclosure-text {
+  font-family: $font-poppins;
+  font-style: normal;
+  font-weight: 400;
+  @include font-size(1rem);
+  line-height: 120%;
+  letter-spacing: 0.02rem;
+  color: #000000;
+
+  & strong {
+    font-weight: 700;
+    color: $color-navy;
+  }
+
+  & em {
+    font-style: italic;
+  }
+}
+
+@mixin brown-button {
+  display: flex;
+  padding: 1rem 1.875rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  border-radius: 0.5rem;
+  background: linear-gradient(126deg, #ffa492 0%, #b25e50 100%), #fff;
+  color: $color-white;
+  text-align: center;
+  font-family: $font-poppins;
+  font-size: 1.375rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.06875rem;
+  border: none;
+  text-decoration: none;
+}
+
+@mixin transparent-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 2.6875rem;
+  width: 12.6875rem;
+  color: $color-white;
+  text-decoration: none;
+  font-family: $font-poppins;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.0225rem;
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+@mixin brown-button-arrow {
+  display: inline-flex;
+  padding: 0.5rem 1.5rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  background: $brown-button-gradient;
+  color: $color-white;
+  text-align: center;
+  font-family: $font-poppins;
+  font-size: 1.275rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.0225rem;
+  border: none;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+@mixin navy-button-arrow {
+  display: inline-flex;
+  padding: 0.5rem 1.5rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  background: $color-navy;
+  color: $color-white;
+  text-align: center;
+  font-family: $font-poppins;
+  font-size: 1.275rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.0225rem;
+  border: none;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+@mixin left-lash {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+  background-size: contain;
+  background-position: right center;
+  background-repeat: no-repeat;
+  transform: rotate(0deg);
+
+  @include respond-above(sm) {
+    left: -6rem;
+    top: 0;
+    height: 17rem;
+    width: 17rem;
+  }
+
+  @include respond-below(sm) {
+    left: -6rem;
+    top: 12vh;
+    height: 20rem;
+    width: 10rem;
+  }
+}
+
+@mixin right-lash {
+  pointer-events: none;
+  z-index: 1;
+  position: absolute;
+  background-size: contain;
+  background-position: right center;
+  background-repeat: no-repeat;
+  transform: rotate(0deg);
+
+  @include respond-above(sm) {
+    right: -2rem;
+    top: 0;
+    height: 28rem;
+    width: 25rem;
+  }
+
+  @include respond-below(sm) {
+    right: -3rem;
+    top: 3vh;
+    height: 12rem;
+    width: 10rem;
+  }
+}
+
+@mixin left-lash-middle {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+  background-size: contain;
+  background-position: right center;
+  background-repeat: no-repeat;
+  transform: rotate(0deg);
+
+  @include respond-above(sm) {
+    left: -6rem;
+    top: 24%;
+    height: 30rem;
+    width: 17rem;
+  }
+
+  @include respond-below(sm) {
+    left: -6rem;
+    top: 12vh;
+    height: 20rem;
+    width: 10rem;
+  }
+}
+
+@mixin right-lash-middle {
+  pointer-events: none;
+  z-index: 1;
+  position: absolute;
+  background-size: contain;
+  background-position: right center;
+  background-repeat: no-repeat;
+  transform: rotate(0deg);
+
+  @include respond-above(sm) {
+    right: -2rem;
+    top: 28%;
+    height: 28rem;
+    width: 25rem;
+  }
+
+  @include respond-below(sm) {
+    right: -3rem;
+    top: 3vh;
+    height: 12rem;
+    width: 10rem;
+  }
+}
+
+@mixin left-lash-large {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+  background-size: contain;
+  background-position: right center;
+  background-repeat: no-repeat;
+  transform: rotate(0deg);
+
+  @include respond-above(sm) {
+    left: -2.2rem;
+    top: 0;
+    height: 38rem;
+    width: 26rem;
+  }
+
+  @include respond-below(sm) {
+    left: -6rem;
+    top: 12vh;
+    height: 20rem;
+    width: 10rem;
+  }
+}
+
+@mixin right-lash-large {
+  pointer-events: none;
+  z-index: 1;
+  position: absolute;
+  background-size: contain;
+  background-position: right center;
+  background-repeat: no-repeat;
+  transform: rotate(0deg);
+
+  @include respond-above(sm) {
+    right: -1rem;
+    top: 0;
+    height: 40rem;
+    width: 25rem;
+  }
+
+  @include respond-below(sm) {
+    right: -3rem;
+    top: 3vh;
+    height: 12rem;
+    width: 10rem;
+  }
+}
+
+// default system font
+$font-family-system: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+  Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+  'Segoe UI Symbol';
+$font-poppins: 'Poppins', $font-family-system;
+
+// breakpoints
+$breakpoints: (
+  xs: 0,
+  xm: 374px,
+  mm: 440px,
+  sm: 576px,
+  wpm: 600px,
+  gfm: 640px,
+  md: 768px,
+  mobileMenu: 960px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+  tab: 1024px
+);
+
+$container-max-widths: (
+  xm: 374px,
+  mm: 475px,
+  sm: 540px,
+  md: 720px,
+  gfm: 640px,
+  wpm: 782px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px,
+);
+
+//helper values

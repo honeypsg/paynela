@@ -1,0 +1,258 @@
+.hero__section {
+  background: $hero-gradient;
+  padding: 10rem 0;
+  position: relative;
+  overflow: hidden;
+
+  @include respond-below(md) {
+    padding: 9.125rem 0 10rem;
+  }
+
+  &::before {
+    background: url('./inc/images/hero-bg.webp') no-repeat right top;
+    height: 100%;
+    width: 100%;
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-size: 80%;
+    @include respond-below(md) {
+      background: url('./inc/images/bg-mobile-hero.webp') no-repeat right top;
+      background-size:100% 100%;
+    }
+  }
+
+  &--intro {
+    padding: 6.3125rem 0 9.75rem;
+    max-width: 42.1875rem;
+    width: 100%;
+    color: $color-white;
+    font-family: $font-poppins;
+
+    @include respond-below(tab) {
+      max-width: 38.1875rem;
+    }
+
+    @include respond-below(lg) {
+      max-width: 35.1875rem;
+    }
+
+    @include respond-below(md) {
+      max-width: 100%;
+      padding: 0 0 2.25rem;
+    }
+
+    &--title {
+      & h1 {
+        font-size: 4.5rem;
+        font-weight: 300;
+        line-height: 106%;
+        margin-bottom: .5rem;
+
+        @include respond-below(tab) {
+          font-size: 4rem;
+        }
+
+        @include respond-below(lg) {
+          font-size: 3.5rem;
+        }
+
+        @include respond-below(md) {
+          font-size: 3rem;
+        }
+
+        @include respond-below(sm) {
+          font-size: 3rem;
+        }
+
+        @include respond-below(mm) {
+          font-size: 2.5rem;
+        }
+
+        @include respond-below(xm) {
+          font-size: 2.2rem;
+        }
+      }
+
+      &--slider {
+        overflow: hidden;
+        height: 5.6rem;
+        width: 100%;
+        text-align: left;
+        position: relative;
+        top: -.5rem;
+
+        @include respond-below(tab) {
+          height: 5rem;
+        }
+
+        @include respond-below(lg) {
+          height: 4.5rem;
+        }
+
+        @include respond-below(md) {
+          height: 4rem;
+        }
+
+        @include respond-below(sm) {
+          height: 3.8rem;
+        }
+
+        @include respond-below(mm) {
+          height: 3.3rem;
+        }
+
+        @include respond-below(xm) {
+          height: 2.9rem;
+        }
+
+        &--container {
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          // animation: slideUp 10s infinite linear;
+
+          & div {
+            height: 5.6rem;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            font-weight: 700;
+
+            @include respond-below(tab) {
+              height: 5rem;
+            }
+    
+            @include respond-below(lg) {
+              height: 4.5rem;
+            }
+    
+            @include respond-below(md) {
+              height: 4rem;
+            }
+    
+            @include respond-below(sm) {
+              height: 3.8rem;
+            }
+    
+            @include respond-below(mm) {
+              height: 3.3rem;
+            }
+    
+            @include respond-below(xm) {
+              height: 2.9rem;
+            }
+          }
+        }
+      }
+    }
+
+    &--description {
+      font-weight: 400;
+      line-height: 140%;
+      font-size: 1.375rem;
+
+      @include respond-below(tab) {
+        font-size: 1.2rem;
+      }
+
+      @include respond-below(lg) {
+        font-size: 1.125rem;
+      }
+      @include respond-below(mm) {
+        font-size: 1rem;
+      }
+
+    }
+  }
+
+  &--video {
+    position: absolute;
+    right: 7%;
+    top: 45%;
+    transform: translate(35%, -50%);
+
+    @include respond-below(tab) {
+      right: 0%;
+    }
+
+    @include respond-below(md) {
+      position: static;
+      transform: none;
+      margin-top: 3rem;
+    }
+    @include respond-below(md) {
+      position: static;
+      transform: none;
+      margin-left: 0%;
+    }
+    
+
+    & video {
+      max-width: 90%;
+      width: 100%;
+      height: auto;
+
+      @include respond-below(md) {
+        max-width: 100%;
+        transform: scale(1.5);
+      }
+      @include respond-below(sm) {
+        transform: scale(2);
+
+      }
+      
+    }
+  }
+
+  &--marquee {
+    padding: 3rem 0;
+    background: $marquee-gradient no-repeat;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-family: $font-poppins;
+    @include respond-below(md){
+      padding: 2.5rem 0;
+    }
+    &--inner {
+      display: flex;
+      gap: 1.5rem;
+      min-width: 200%;
+      animation: marquee 12s linear infinite;
+
+      & span {
+        font-size: 3rem;
+        font-weight: 600;
+        color: $color-white;
+        line-height: 106%;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        @include respond-below(md){
+          font-size: 1.5rem;
+          letter-spacing: 2px;
+        }
+      }
+      &--seperator{
+        color: $color-teal !important;
+        font-weight: 300 !important;
+      }
+    }
+  }
+}
+
+/* Animation */
+@keyframes marquee {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}

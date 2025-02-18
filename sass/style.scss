@@ -1,0 +1,20 @@
+/*
+Theme Name: Paynela Theme
+Theme URI: https://paynela.com
+Author: Paynela
+Author URI: https://paynela.com
+Primary Branch: main
+Version: 1.6.2.0
+Tags: responsive, bootstrap, SASS
+*/
+
+// Variables
+@import 'includes/variables';
+// Mixins
+@import 'mixins/mixins';
+
+// Reset
+@import 'includes/reset';
+
+// Components
+@import 'components/components';

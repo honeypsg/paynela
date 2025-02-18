@@ -1,0 +1,208 @@
+{
+    "key": "group_679a62adf169c",
+    "title": "Hero Section",
+    "fields": [
+        {
+            "key": "field_679a62ae07b64",
+            "label": "Hero Details",
+            "name": "hero_details",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_679a633e07b67",
+                    "label": "Hero Fixed Heading",
+                    "name": "hero_fixed_heading",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_679a62d707b65",
+                    "label": "Hero Changing Heading",
+                    "name": "hero_changing_heading",
+                    "aria-label": "",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "table",
+                    "pagination": 0,
+                    "min": 0,
+                    "max": 0,
+                    "collapsed": "",
+                    "button_label": "Add Row",
+                    "rows_per_page": 20,
+                    "sub_fields": [
+                        {
+                            "key": "field_679a62f207b66",
+                            "label": "Title",
+                            "name": "title",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "parent_repeater": "field_679a62d707b65"
+                        }
+                    ]
+                },
+                {
+                    "key": "field_679a634e07b68",
+                    "label": "Hero Description",
+                    "name": "hero_description",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "rows": "",
+                    "placeholder": "",
+                    "new_lines": ""
+                },
+                {
+                    "key": "field_679a639807b6a",
+                    "label": "Hero Video (Webm)",
+                    "name": "hero_video",
+                    "aria-label": "",
+                    "type": "file",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_size": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_679a65e7d14e9",
+                    "label": "Hero Video (MOV)",
+                    "name": "hero_video_mov",
+                    "aria-label": "",
+                    "type": "file",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_size": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_679a65f9d14ea",
+                    "label": "Hero Video (MP4)",
+                    "name": "hero_video_mp4",
+                    "aria-label": "",
+                    "type": "file",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_size": "",
+                    "max_size": "",
+                    "mime_types": ""
+                }
+            ]
+        },
+        {
+            "key": "field_679a637307b69",
+            "label": "Marquee Text",
+            "name": "marquee_text",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "2"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1738171911
+}
